@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Мой сайт </title>
+</head>
+<body>
+<font color="black" size="3"> <b>Здравствуйте! Моя веб-страница!</b></font> 
+<br> <br>
+<table border="0" cellspacing="0" align="left" width="750px">
+<tr> 
+<td> <img src="image/SAVE.jpg" alt="Фото" width="400px;"> </td>
+<td valign="top"> 
+<b> <u> <font color="#7ca7d7" size="5">Лискина Ольга Сергеевна</font> </b> </u> <br>
+<font color="black" size="3"> <b>Адрес:</b> Челябинск</font> <br>
+<font color="black" size="3"> <b>Опыт работы:</b> разный в разных сферах</font> <br>
+<font color="black" size="3"> <b>Телефон:</b> +7 (912) 305 97 42</font>
+</td> </tr>
+<tr> <td>
+<br>
+<b> <font color="black" size="3">Знание языков:</font> </b> <br> 
+
+<table border="1" height="200px" width="400px" bgcolor="#7ca7d7" cellspacing="0px">
+<tr> <td>Степень владения</td>
+	<td align="center">Java</td>
+	<td align="center">JavaScript</td>
+	<td align="center">C++</td>
+	<td align="center">C#</td>
+	<td align="center">Swift</td>
+</tr>
+<tr> <td>Отличное владение</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+</tr>
+<tr> <td>Хорошее владение</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+</tr> 
+<tr> <td>Среднее владение</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+<td align="center">нет</td>
+</tr>
+<tr> <td>Плохое владение</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td bgcolor="#f29edb" align="center">да</td>
+<td bgcolor="#f29edb" align="center">да</td>
+</tr> 
+</td>
+</tr>
+</table>
+ <br>
+<div class="form-group">
+  <label for="phone"> <b>Телефон:<b> </label>
+  <select id="country" class="form-control">
+    <option value="ru"><img src="">Россия +7</option>
+    <option value="ua">Украина +380</option>
+    <option value="by">Белоруссия +375</option>
+  </select>
+  <input id="phone" type="text" class="form-control">
+</div>
+
+<script>
+jQuery (function ($) {  
+  $(function() {
+    function maskPhone() {
+      var country = $('#country option:selected').val();
+      switch (country) {
+        case "ru":
+          $("#phone").mask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#phone").mask("+380(999) 999-99-99");
+          break;
+        case "by":
+          $("#phone").mask("+375(999) 999-99-99");
+          break;          
+      }    
+    }
+    maskPhone();
+    $('#country').change(function() {
+      maskPhone();
+    });
+  });
+});
+</script>
+
+<br>
+<div class="form-group">
+  <label for="phone"> <b>Имя:<b> </label>
+  <select id="country" class="form-control">
+    <option value="ru"><img src="">Россия +7</option>
+    <option value="ua">Украина +380</option>
+    <option value="by">Белоруссия +375</option>
+  </select>
+  <input id="phone" type="text" class="form-control">
+</div>
+
+<script>
+jQuery (function ($) {  
+  $(function() {
+    function maskPhone() {
+      var country = $('#country option:selected').val();
+      switch (country) {
+        case "ru":
+          $("#phone").mask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#phone").mask("+380(999) 999-99-99");
+          break;
+        case "by":
+          $("#phone").mask("+375(999) 999-99-99");
+          break;          
+      }    
+    }
+    maskPhone();
+    $('#country').change(function() {
+      maskPhone();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
